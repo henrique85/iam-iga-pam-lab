@@ -1,6 +1,3 @@
-# iam-iga-pam-lab
-Laboratório prático de IAM, IGA e PAM com Active Directory, Microsoft Lists, Windows, Linux e ferramentas open-source.
-
 # IAM, IGA e PAM Lab
 
 Laboratório prático para estudo de **Identity and Access Management**, **Identity Governance and Administration** e **Privileged Access Management**, simulando um ambiente corporativo com Active Directory, Windows, Linux e ferramentas de segurança.
