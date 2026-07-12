@@ -1,4 +1,4 @@
-# 01 — Visão Geral do Laboratório
+# 01 - Visão Geral do Laboratório
 
 ## Objetivo do laboratório
 
