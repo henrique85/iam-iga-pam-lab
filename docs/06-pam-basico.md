@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Esta etapa documenta a implementação inicial de conceitos de **PAM — Privileged Access Management** no laboratório.
+Esta etapa documenta a implementação inicial de conceitos de **PAM - Privileged Access Management** no laboratório.
 
 O objetivo foi separar contas comuns de contas administrativas e conceder privilégio local por meio de grupo, evitando atribuição direta de permissões administrativas a usuários individuais.
 
