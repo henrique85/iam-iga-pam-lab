@@ -211,3 +211,25 @@ Em um ambiente corporativo mais maduro, controles adicionais seriam necessários
 A etapa validou com sucesso a separação entre usuário comum e usuário administrativo.
 
 O acesso privilegiado foi concedido de forma controlada por grupo, permitindo melhor rastreabilidade, manutenção e governança.
+
+
+## Gerenciamento de administradores locais via GPO
+
+Após a validação inicial manual, foi criada uma GPO para controlar de forma centralizada os administradores locais da estação `WIN10-01`.
+
+### GPO criada
+
+| Item | Valor |
+|---|---|
+| Nome da GPO | GPO-WIN10-LOCAL-ADMINS |
+| Vinculada em | IAMLAB > Computadores |
+| Escopo | Computadores da OU Computadores |
+| Finalidade | Adicionar grupo privilegiado do domínio ao grupo local Administrators |
+
+### Caminho da configuração
+
+```text
+Computer Configuration
+└── Preferences
+    └── Control Panel Settings
+        └── Local Users and Groups
