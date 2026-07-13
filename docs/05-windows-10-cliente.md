@@ -86,7 +86,7 @@ Resultado esperado:
 iamlab\joao.silva
 ```
 
-## Teste de autorização — Usuário João Silva
+## Teste de autorização - Usuário João Silva
 
 Usuário testado:
 
@@ -125,7 +125,7 @@ O usuário conseguiu criar arquivo de teste na pasta TI:
 teste-joao-ti.txt
 ```
 
-## Teste de autorização — Usuária Maria Souza
+## Teste de autorização - Usuária Maria Souza
 
 Usuária testada:
 
