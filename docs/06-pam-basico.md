@@ -233,3 +233,40 @@ Computer Configuration
 └── Preferences
     └── Control Panel Settings
         └── Local Users and Groups
+
+## Registro do acesso privilegiado no Microsoft Lists
+
+Após a criação da GPO de administradores locais, o acesso privilegiado foi registrado no catálogo manual de IGA no Microsoft Lists.
+
+### Registro criado
+
+| Campo | Valor |
+|---|---|
+| Recurso | Administradores locais WIN10-01 |
+| Caminho | `WIN10-01 > Local Group > Administrators` |
+| Plataforma | Windows Server |
+| Tipo de Recurso | Grupo Local Administrativo |
+| Grupo de Acesso | `GG_ADMIN_SERVIDORES` |
+| Grupo de Função | `Admins_TI` |
+| Permissão | Admin |
+| Dono do Recurso | Coordenador de TI |
+| Aprovador | Coordenador de TI |
+| Criticidade | Alta |
+| Risco | Alto |
+| Revisão Periódica | Mensal |
+| Status | Ativo |
+
+### Justificativa
+
+Acesso administrativo local concedido via GPO para administração técnica controlada da estação `WIN10-01`.
+
+### Conceito IGA + PAM aplicado
+
+Este registro demonstra a união entre governança de identidade e controle de privilégio.
+
+No Active Directory e na GPO, o acesso existe tecnicamente:
+
+```text
+GG_ADMIN_SERVIDORES
+↓
+Administrators local do WIN10-01
