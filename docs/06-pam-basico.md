@@ -270,3 +270,4 @@ No Active Directory e na GPO, o acesso existe tecnicamente:
 GG_ADMIN_SERVIDORES
 ↓
 Administrators local do WIN10-01
+```
