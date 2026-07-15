@@ -213,27 +213,6 @@ A etapa validou com sucesso a separação entre usuário comum e usuário admini
 O acesso privilegiado foi concedido de forma controlada por grupo, permitindo melhor rastreabilidade, manutenção e governança.
 
 
-## Gerenciamento de administradores locais via GPO
-
-Após a validação inicial manual, foi criada uma GPO para controlar de forma centralizada os administradores locais da estação `WIN10-01`.
-
-### GPO criada
-
-| Item | Valor |
-|---|---|
-| Nome da GPO | GPO-WIN10-LOCAL-ADMINS |
-| Vinculada em | IAMLAB > Computadores |
-| Escopo | Computadores da OU Computadores |
-| Finalidade | Adicionar grupo privilegiado do domínio ao grupo local Administrators |
-
-### Caminho da configuração
-
-```text
-Computer Configuration
-└── Preferences
-    └── Control Panel Settings
-        └── Local Users and Groups
-
 ## Registro do acesso privilegiado no Microsoft Lists
 
 Após a criação da GPO de administradores locais, o acesso privilegiado foi registrado no catálogo manual de IGA no Microsoft Lists.
@@ -271,3 +250,33 @@ GG_ADMIN_SERVIDORES
 ↓
 Administrators local do WIN10-01
 ```
+
+No Microsoft Lists, o acesso passa a possuir contexto de governança:
+
+```text
+Dono
+Aprovador
+Criticidade
+Risco
+Justificativa
+Revisão periódica
+Status
+```
+
+### Classificação do acesso
+
+Acessos privilegiados devem ter revisão mais frequente do que acessos comuns, pois representam maior risco operacional e de segurança.
+
+Neste laboratório, o acesso administrativo local foi classificado como:
+
+| Item | Classificação |
+|---|---|
+| Criticidade | Alta |
+| Risco | Alto |
+| Revisão | Mensal |
+
+### Observação
+
+Este controle ainda representa uma abordagem básica de PAM, pois o privilégio permanece atribuído de forma contínua aos membros do grupo `GG_ADMIN_SERVIDORES`.
+
+Em ambientes corporativos mais maduros, o ideal é evoluir para modelos com acesso temporário, aprovação, MFA, auditoria centralizada e rotação de credenciais.
